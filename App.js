@@ -79,7 +79,7 @@ updateWeatherApp = (one) => {
     dayicon.src=iconSrc
     temp.innerHTML  =`<span style='color:#dada15'>${timeNow}&deg;C</span>`
     country.textContent = one.sys.country
-    locations.innerHTML= ` <span><img src="/public/assets/iconfinder-icon.svg" alt="" srcset=""></span>${one.name}`
+    locations.innerHTML= ` <span><img src="/assets/iconfinder-icon.svg" alt="" srcset=""></span>${one.name}`
     feel.innerHTML = `<span style='color:#dada15'>${one.main.feels_like}&deg;C</span>` 
     desp.innerHTML =  one.weather[0].description //`<span>${one.weather[0].description}%;C</span>`
     document.getElementById('b2').innerHTML= one.weather[0].description
@@ -133,3 +133,4 @@ const toCelcius = (kelvin) => {
     celcius = Math.round(kelvin - 273.15);
     return celcius;
 }
+
